@@ -4,7 +4,4 @@ This is where I will store all my Azure AI Search Examples.  For now, I have one
 ## Api-Azure-AI-Search
 Please [click here](Azure-AI-Search-API/README.md) to navigate to the documentation for this example. 
 
-Azure-AI-Search-Examples/Azure-AI-Search-API/README.md
-
-
-https://github.com/Rickcau/Azure-AI-Search-Examples/tree/master/Azure-AI-Search-API#readme
+![Swagger-Azure-AI-Search-API.jpg](images/Swagger-Azure-AI-Search-API.jpg)
