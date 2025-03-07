@@ -55,6 +55,10 @@ namespace Azure_AI_Search_API.Controllers
         /// <param name="request">The search request containing the search string and other parameters</param>
         /// <returns>Search results matching the query</returns>
         [HttpPost("text/{indexName}/search")]
+        [SwaggerOperation(
+           Summary = "Perform a search agasint a text only embeddings index and return matching documents",
+           Description = "Perform a search agasint a text only embeddings index and return matching documents"
+        )]
         [ProducesResponseType(typeof(List<GolfBallDataV1>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -97,6 +101,10 @@ namespace Azure_AI_Search_API.Controllers
         /// <param name="request">The search request containing the search criteria and other parameters</param>
         /// <returns>Search results matching the query</returns>
         [HttpPost("textimage/{indexName}/search")]
+        [SwaggerOperation(
+           Summary = "Perform a search agasint a a multi-modal embeddings index using the uploaded image(s) and return matching documents",
+           Description = "Perform a search agasint a a multi-modal embeddings index using the uploaded image(s) and return matching documents"
+        )]
         [ProducesResponseType(typeof(List<GolfBallDataV1>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]

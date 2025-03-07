@@ -57,6 +57,10 @@ namespace Azure_AI_Search_API.Controllers
         /// <param name="maxResults">The maximum number of results to return (default: 100)</param>
         /// <returns>A list of documents</returns>
         [HttpGet("text/{indexName}/documents")]
+        [SwaggerOperation(
+           Summary = "Get all document for a text embeddings index",
+           Description = "Returns all document for a text embeddings index"
+        )]
         [ProducesResponseType(typeof(List<SearchDocument>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -96,6 +100,10 @@ namespace Azure_AI_Search_API.Controllers
         /// <param name="maxResults">The maximum number of results to return (default: 100)</param>
         /// <returns>A list of documents</returns>
         [HttpGet("textimage/{indexName}/documents")]
+        [SwaggerOperation(
+           Summary = "Get all document for a multi-modal embeddings index",
+           Description = "Returns all document for a multi-modal embeddings index"
+        )]
         [ProducesResponseType(typeof(List<SearchDocument>), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]

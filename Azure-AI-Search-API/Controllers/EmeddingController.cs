@@ -51,9 +51,13 @@ namespace Azure_AI_Search_API.Controllers
         /// <remarks>
         /// Processes and generates embeddings for the specified text-only index
         /// </remarks>
-        /// <param name="request">The request containing the index name and data to process</param>
+        /// <param name="indexName">The request containing the index name and data to process</param>
         /// <returns>A summary of the embedding generation process</returns>
         [HttpPost("text/{indexName}/embeddings")]
+        [SwaggerOperation(
+           Summary = "Generate embeddings for a text only index",
+           Description = "Generate embeddings for a text only index"
+        )]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -90,6 +94,10 @@ namespace Azure_AI_Search_API.Controllers
         /// <param name="request">The request containing the index name and data to process</param>
         /// <returns>A summary of the embedding generation process</returns>
         [HttpPost("textimage/{indexName}/embeddings")]
+        [SwaggerOperation(
+           Summary = "Generate embeddings for a multi-modal index",
+           Description = "Generate embeddings for a multi-modal index"
+        )]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
